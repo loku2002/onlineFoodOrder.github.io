@@ -1,0 +1,310 @@
+/* CSS reset
+*{
+    margin: 0px;
+    padding: 0px;
+} */
+
+/* CSS VARIABLES
+:root{
+    --navbar-height: 59px ;
+} */
+
+body{
+    background-color: black;
+}
+
+/* NAVIGATION BAR */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px;
+    padding: 2px;                     /*Harr direction se gap*/
+}
+#logo img {
+    padding: 3px 5px;
+    margin: 7px 9px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50px;
+}
+
+/* Navigation Bar:List Styling */
+#navbar ul{
+    display: flex;                    /*jo bhi itrms hai wo neeche se side mai aa jayenge*/
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    height: 71%;
+    width: 100%;
+    z-index: -1;                  /*content jo banaya hai wo show hone lagega*/
+    opacity: 0.7;
+}
+
+#navbar ul li{
+    list-style: none;                 /*jo bhi harr line se pehle dots aate the wo nhi aayenge*/
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{  /*used "#navbar ul li a" so that hover krne pe color change ho paaye*/
+    color: white;
+    display: block;
+    padding: 10px 50px;
+    border-radius: 25px;
+    text-decoration: none;             /*underline jo thi wo gayab ho jayegi*/
+    transition: all 1s ease-in-out 0.5s ;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    font-size: 1.7rem;
+}
+
+
+/* HOME SECTION  */
+
+#home{
+    display: flex;                  /*sbko ek line mai le aayega*/
+    flex-direction: column;         /*alag alag row mai le jayega  content ko*/
+    padding: 10px 200px;
+    height: 490px;
+    align-items: center;   
+    justify-content: center;
+}
+
+#home::before{
+    content: "";
+    background: url('home2.webp') no-repeat center center/cover;      /*image acche se set ho jaati hai "no-repeat center center/cover" se */
+    position: absolute;
+    height: 665px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;                  /*content jo banaya hai wo show hone lagega*/
+    opacity: 0.9;
+}
+
+#home h1{
+    text-align: center;
+    color: black;
+    font-family: 'Noticia Text', serif;
+    /* font-family: 'Fasthand', cursive; */
+    /* font-family: 'Libre Baskerville', serif; */
+}
+
+#home p{
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Fasthand', cursive;
+    /* font-family: 'Libre Baskerville', serif; */
+}
+
+
+/* SERVIICES SECTION  */
+#services{
+    margin: 20px;
+    display: flex;
+
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 20px;
+    margin: 1px 10px;
+    margin-top: -2px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    background-color: #d8d8d8;
+    transition: all 4s ease-in-out 1s ;
+}
+#services .box img{
+    height: 156px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+#services .box p{
+    font-family: 'Noticia Text', serif; 
+}
+.box:hover{
+    cursor: pointer;
+}
+
+
+
+/* CLIENTS SECTION  */
+
+#clint-section{
+    position: relative;                 /*utni hii gaajah lega jitni isko cahaiye*/
+    height: 100px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('image1.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 99%;
+    z-index: -1;
+    opacity: 2;
+}
+
+#clients{
+    display: grid;
+    grid-template-columns: 190px 190px 190px 190px ;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 110px;
+}
+
+#clients img{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.client-item img:hover{
+    cursor: pointer;
+}
+
+
+/* CONTACT SECTION  */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 97%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    /* background: url('contact\ us.webp') no-repeat center center/cover; */
+    margin-top: 20px;
+}
+
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+
+
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px; 
+    font-size: 1.1rem;
+}
+
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Noticia Text', serif;
+    color: white;
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 2px 2px;
+    margin-bottom: 0px;
+}
+
+
+                                          /* utility classes  */
+
+/* Welcome To Indian Masala House */
+.h1-primary{
+    font-size: 3.5rem;
+    padding: 25px;
+    font-family: 'Noticia Text', serif;
+    background: rgb(218 166 166);
+    border-radius: 65px;
+    transition: all 2s ease-in-out 0.2s ;
+}
+.h1-primary:hover{
+    font-size: 4.5rem;
+    cursor: pointer;
+}
+
+/* Contaact Us heading  */
+.h2-primary{
+    font-size: 3rem;
+    padding: 15px;
+    font-family: 'Noticia Text', serif;
+    color: white;
+    transition: all 2s ease-in-out 0.2s ;
+}
+.h2-primary:hover{
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+/* Our Clients  */
+.h3-primary{
+    font-size: 3rem;
+    padding: 15px;
+    font-family: 'Noticia Text', serif;
+    color: black;
+    background: yellow;
+    width: 99%;
+    transition: all 2s ease-in-out 0.2s ;
+}
+.h3-primary:hover{
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+/* North Indian Food , South Indian Food and Food Dilevery heading*/
+.h-secondary{
+    text-align: center;
+    font-family: 'Noticia Text', serif;
+    font-size: 1.8rem;
+    padding: 12px;
+    transition: all 2s ease-in-out 0.5s ;
+}
+
+#contactus{
+    padding-top: 50px;
+    
+}
+
+#btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: black;
+    margin: 40px;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: all 1s ease-in-out 0.5s ;
+}
+#btn:hover{
+    font-size: 1.5rem;
+    background-color: rgb(55, 36, 36);
+}
+
+.center{
+    text-align: center;
+}
+
+
+

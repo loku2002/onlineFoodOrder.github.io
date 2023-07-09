@@ -1,0 +1,219 @@
+/* CSS reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CSS VARIABLES */
+:root{
+    --navbar-height: 59px ;
+}
+
+/* NAVIGATION BAR */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px;
+    padding: 2px;                     /*Harr direction se gap*/
+}
+#logo img {
+    padding: 3px 5px;
+    margin: 7px 9px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50px;
+}
+
+/* Navigation Bar:List Styling */
+#navbar ul{
+    display: flex;                    /*jo bhi itrms hai wo neeche se side mai aa jayenge*/
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    height: 71%;
+    width: 100%;
+    z-index: -1;                  /*content jo banaya hai wo show hone lagega*/
+    opacity: 0.4;
+}
+
+#navbar ul li{
+    list-style: none;                 /*jo bhi harr line se pehle dots aate the wo nhi aayenge*/
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{  /*used "#navbar ul li a" so that hover krne pe color change ho paaye*/
+    color: white;
+    display: block;
+    padding: 10px 10px;
+    border-radius: 25px;
+    text-decoration: none;             /*underline jo thi wo gayab ho jayegi*/
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* HOME SECTION  */
+
+#home{
+    display: flex;                  /*sbko ek line mai le aayega*/
+    flex-direction: column;         /*alag alag row mai le jayega  content ko*/
+    padding: 10px 200px;
+    height: 400px;
+    align-items: center;   
+    justify-content: center;
+
+}
+
+#home::before{
+    content: "";
+    background: url('image3.jpg') no-repeat center center/cover;      /*image acche se set ho jaati hai "no-repeat center center/cover" se */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;                  /*content jo banaya hai wo show hone lagega*/
+    opacity: 0.4;
+}
+
+#home h1{
+    text-align: center;
+    color: black;
+    font-family: 'Noticia Text', serif;
+    /* font-family: 'Fasthand', cursive; */
+    /* font-family: 'Libre Baskerville', serif; */
+}
+
+#home p{
+    color: black;
+    font-size: 1rem;
+    font-family: 'Fasthand', cursive;
+    /* font-family: 'Libre Baskerville', serif; */
+}
+
+
+/* SERVIICES SECTION  */
+#services{
+    margin: 34px;
+    display: flex;
+
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 4px 7px;
+    border-radius: 25px;
+    background-color: yellow;
+}
+#services .box img{
+    height: 156px;
+    display: block;
+    margin: auto;
+}
+#services{
+
+}
+#services{
+
+}
+#services{
+
+}
+#services{
+
+}
+
+
+
+/* utility classes  */
+
+.h-primary{
+    font-size: 3rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-size: 2rem;
+    padding: 12px;
+}
+
+#btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(186, 144, 144);
+    margin: 17px;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contact{
+    /* margin-top: 5px; */
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 95%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    background: url('contact\ us.webp') no-repeat center center/cover;
+    margin-top: 35px;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+
+
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px; 
+    font-size: 1.1rem;
+}
+
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Noticia Text', serif;
+}
